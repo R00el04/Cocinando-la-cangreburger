@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Construyendo una Cangre Burger</title>
-    <link rel="stylesheet" href="css/css.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-  </head>
-  <body>
-    <h1>COCINANDO LA CANGREBURGER</h1>
-    <main id="app" class="container">
-      <aside class="ingredients">
-        <div v-for="(ingrediente, index) in ingredientes" :key="index">
-          <button @click="addIngrediente(ingrediente)">
-            {{ ingrediente }}
-          </button>
-        </div>
-        <button @click="cookBurger" class="cook">Cocinar</button>
-      </aside>
-      <section class="resultado">
-        <h2>Resultado:</h2>
-        <p>Ingredientes seleccionados: {{ selectedIngredientes.join(', ') }}</p>
-        <div v-if="burgerCooked" class="Cooked">
-          <p>BIEN HECHO</p>
 
-          <img
-            src="img/burger.jpg"
-            alt="Hamburguesa"
-            width="300px"
-            height="200px"
-          />
-        </div>
-        <div v-else class="sin_cocinar" class="sinCocinar">
-          <p>HA COCINAR</p>
-          <img
-            src="img/sin_cocinar.jpg"
-            alt="Hamburguesa"
-            width="300px"
-            height="200px"
-          />
-        </div>
-        <div v-if="burgerUncooked" class="Uncooked">
-          <p>PREPARA BONITO BOB ESPONJA</p>
-          <img
-            src="img/else.jpg"
-            alt="Hamburguesa"
-            width="300px"
-            height="200px"
-          />
-        </div>
-      </section>
-    </main>
-    <script src="js/myapp.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocinando la Cangreburger</title>
+  <link rel="stylesheet" href="css/css.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+  <h1>COCINANDO LA CANGREBURGER</h1>
+  <main id="app" class="container">
+    <aside class="ingredients">
+      <div v-for="(ingrediente, index) in ingredientes" :key="index">
+        <button @click="addIngrediente(ingrediente)">
+          {{ ingrediente }}
+        </button>
+      </div>
+      <button @click="cookBurger" class="cook">Cocinar</button>
+    </aside>
+    <section class="resultado">
+      <h2>Resultado:</h2>
+      <p>Ingredientes seleccionados: {{ selectedIngredientes.join(', ') }}</p>
+      <div v-if="burgerCooked" class="Cooked">
+        <p>BIEN HECHO</p>
+
+        <img src="img/burger.jpg" alt="Hamburguesa" width="300px" height="200px" />
+      </div>
+      <div v-else class="sin_cocinar" class="sinCocinar">
+        <p>HA COCINAR</p>
+        <img src="img/sin_cocinar.jpg" alt="Hamburguesa" width="300px" height="200px" />
+      </div>
+      <div v-if="burgerUncooked" class="Uncooked">
+        <p>PREPARA BONITO BOB ESPONJA</p>
+        <img src="img/else.jpg" alt="Hamburguesa" width="300px" height="200px" />
+      </div>
+    </section>
+  </main>
+  <script src="js/myapp.js"></script>
+</body>
+
 </html>
