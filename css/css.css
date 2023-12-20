@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #e2e2e2;
+  color: #252525;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border-radius: 5px;
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(228, 81, 81);
+}
+
+.ingredients {
+  text-align: center;
+  flex: 1;
+  background-color: #f8eb75;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.ingredients button {
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(255, 160, 71);
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ingredients button:hover {
+  transition: 0.3s;
+  background-color: rgb(255, 179, 108);
+}
+
+.ingredients .cook {
+  margin: 5px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgb(51, 182, 51);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.ingredients .cook:hover {
+  transition: 0.3s;
+  color: #ffffff;
+  background-color: rgb(57, 201, 57);
+}
+
+.resultado {
+  flex: 1;
+  text-align: center;
+  background-color: #4fc3f7;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.sinCocinar,
+.Uncooked {
+  background-color: #4fc3f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.sinCocinar img,
+.Uncooked img {
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.Cooked {
+  background-color: #81c784;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.Cooked img {
+  border-radius: 5px;
+  margin-top: 10px;
+}
